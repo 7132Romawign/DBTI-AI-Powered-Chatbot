@@ -1,0 +1,49 @@
+body {
+
+    background-image: url('img/bosco.jpg'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 2000px 1300px;
+    background-attachment: fixed;
+}
+
+chatbot {
+ width: 400px;
+ margin: 50px auto;
+ border: 2px solid #2F8D46;
+ border-radius: 10px;
+ background-color: green;
+}
+
+header {
+ background-color: none;
+ font-size: 40px;
+ font-weight: bold;
+ text-transform: uppercase;
+ color: yellow;
+ padding-left: 50px;
+ margin-top: 1px;
+ text-align: left;
+}
+
+#chatbox {
+ list-style-type: none;
+ padding: 30px;
+ height: 300px;
+ overflow-y: auto;
+}
+
+input-area {
+ display: flex;
+}
+#user-input {
+ flex-grow: 1;
+ padding: 10px;
+}
+#send-btn {
+ background-color: #2F8D46;
+ color: white;
+ border: none;
+ block-size: 15px;
+ text-size-adjust: 10px;
+}
