@@ -17,13 +17,13 @@ chatbot {
 
 header {
  background-color: none;
- font-size: 40px;
+ font-size: 20px;
  font-weight: bold;
- text-transform: uppercase;
- color: yellow;
+  color: yellow;
  padding-left: 50px;
- margin-top: 1px;
+ margin-top: 5px;
  text-align: left;
+
 }
 
 #chatbox {
