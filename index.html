@@ -7,26 +7,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Boscobot</title>
 
-  <link rel="stylesheet" href="style.css"> 
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="main.header">
+    <h2>Don Bosco Technological Institute</h2>
+    <div class="typing-container">
+      <p class="typing-text">Welcome!</p>
+    </div>
+  </header>
 
-  <h1>Don Bosco Technological Institute</h1>
-  <p>Welcome! Use the chat widget in the bottom corner to ask about our programmes, fees, admissions, and more.</p>
- 
-<script type="text/javascript">
+
+  <script type="text/javascript">
   (function(d, t) {
     var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
     v.onload = function() {
       window.voiceflow.chat.load({
-        verify: { projectID: '6a9b6aee3198aadbfe60a8e8' },
-        url: 'https://general-runtime.voiceflow.com'
+        verify: { projectID: '6a8534607b52eb428f1077ca' },
+        url: 'https://general-runtime.voiceflow.com',
+        voice: {
+          url: "https://runtime-api.voiceflow.com"
+        }
       });
     }
     v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
   })(document, 'script');
 </script>
 
+<footer>
+   <p>Use the chat widget in the bottom-right corner to ask <br>
+   about our programmes, fees, admissions, and more.</p>
+  </footer>
 
 </body>
 </html>
+
+
+
