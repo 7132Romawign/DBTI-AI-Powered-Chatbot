@@ -3,7 +3,7 @@ body {
     background-image: url('bosco.jpg'); 
     background-repeat: no-repeat;
     background-position: center;
-    background-size: fit;
+    background-size: fixed;
     background-attachment: fixed;
 }
 
