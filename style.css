@@ -13,12 +13,12 @@ body {
     align-items: center;
 }
 
-/* Darkens the background image so the card stands out */
+/* Darkens the background image so text is readable */
 body::before {
     content: "";
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); 
+    background-color: rgba(0, 0, 0, 0.5); 
     z-index: -1;
 }
 
@@ -26,57 +26,53 @@ header {
     text-align: center;
     color: yellow;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 2px 6px #000000;
 }
 
 .welcome-text {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
     color: white;
     margin-top: 5px;
+    text-shadow: 2px 2px 6px #000000;
 }
 
-.info-box {
-    background-color: rgba(255, 255, 255, 0.95);
-    width: 500px;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+.center-content {
     text-align: center;
-    color: #333;
+    color: white;
+    max-width: 600px;
+    text-shadow: 2px 2px 6px #000000;
 }
 
+/* Styling specifically for the DBTI Logo */
 .school-logo {
-    width: 180px;          
+    width: 200px;          
     height: auto;
     display: block;
     margin: 0 auto 20px auto; 
+    /* This trick makes white pixels transparent on dark backgrounds */
+    mix-blend-mode: screen; 
 }
 
-.info-box h3 {
+.center-content h3 {
     color: #2F8D46;
+    font-size: 24px;
     margin-top: 10px;
-    font-size: 22px;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 8px;
 }
 
-.info-box p {
-    text-align: left;
+.center-content p {
     line-height: 1.6;
-}
-
-.info-box ul {
-    text-align: left;
-    line-height: 1.8;
-    margin-bottom: 20px;
+    font-size: 18px;
 }
 
 .instruction {
     margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid #ccc;
-    color: #2F8D46;
-    font-size: 16px;
-    text-align: center !important;
+    font-size: 18px;
+    color: yellow;
 }
 
 footer {
