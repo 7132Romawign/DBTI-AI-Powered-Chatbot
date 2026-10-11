@@ -1,44 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
- 
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boscobot</title>
-
-
+  <title>BoscoBot</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="main.header">
-    <h2>Don Bosco Technological Institute AI Chatbot</h2>
-    <div class="typing-container">
-      <p class="typing-text">Welcome!</p>
-    </div>
-  </header>
+  
+  <div class="content-wrapper">
+    <header>
+      <h2>Don Bosco Technological Institute AI Chatbot</h2>
+      <p class="welcome-text">Welcome!</p>
+    </header>
 
+    <main class="info-box">
+      <h3>How can I help you today?</h3>
+      <p>I am BoscoBot, your virtual assistant. You can ask me about:</p>
+      <ul>
+        <li>Programmes offered</li>
+        <li>Fees structure</li>
+        <li>Admissions process</li>
+        <li>And much more!</li>
+      </ul>
+      <p class="instruction"><strong>Click the chat bubble in the bottom-right corner to start chatting.</strong></p>
+    </main>
+  </div>
 
- <script type="text/javascript">
-  (function(d, t) {
-    var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-    v.onload = function() {
-      window.voiceflow.chat.load({
-        verify: { projectID: '6a9b6aee3198aadbfe60a8e8' },
-        url: 'https://general-runtime.voiceflow.com'
-      });
-    }
-    v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-  })(document, 'script');
-</script>
-
-<footer>
-   <p>Use the chat widget in the bottom-right corner to ask <br>
-   about our programmes, fees structure, admissions, and more.</p>
+  <footer>
+    <p>Don Bosco Technological Institute | Papua New Guinea</p>
   </footer>
+
+  <!-- The Standard Voiceflow Widget Script -->
+  <script type="text/javascript">
+    (function(d, t) {
+        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        v.onload = function() {
+          window.voiceflow.chat.load({
+            verify: { projectID: '6a9b6aee3198aadbfe60a8e8' },
+            url: 'https://general-runtime.voiceflow.com',
+            voice: {
+              url: 'https://runtime-api.voiceflow.com'
+            }
+          });
+        }
+        v.src = 'https://cdn.voiceflow.com/widget-next/bundle.mjs'; v.type = 'text/javascript'; s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
 
 </body>
 </html>
-
-
-
