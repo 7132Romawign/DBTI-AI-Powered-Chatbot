@@ -49,10 +49,11 @@ header {
 
 /* Styling specifically for the DBTI Logo */
 .school-logo {
-    width: 180px;          
+    width: 180px;          /* Adjust size here if needed */
     height: auto;
     display: block;
-    margin: 0 auto 20px auto; 
+    margin: 0 auto 20px auto; /* Centers the logo with space below */
+    /* No border-radius or glow needed for an official crest */
 }
 
 .info-box h3 {
