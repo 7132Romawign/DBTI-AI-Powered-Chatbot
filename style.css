@@ -13,7 +13,7 @@ body {
     align-items: center;
 }
 
-/* Darkens the background image slightly so text is readable */
+/* Darkens the background image so the card stands out */
 body::before {
     content: "";
     position: absolute;
@@ -33,26 +33,41 @@ header {
     font-size: 24px;
     font-weight: bold;
     color: white;
+    margin-top: 5px;
 }
 
-/* The central information box */
 .info-box {
     background-color: rgba(255, 255, 255, 0.95);
     width: 500px;
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    text-align: left;
+    text-align: center;
     color: #333;
+}
+
+.school-logo {
+    width: 180px;          
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto; 
 }
 
 .info-box h3 {
     color: #2F8D46;
-    margin-top: 0;
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.info-box p {
+    text-align: left;
+    line-height: 1.6;
 }
 
 .info-box ul {
+    text-align: left;
     line-height: 1.8;
+    margin-bottom: 20px;
 }
 
 .instruction {
@@ -61,6 +76,7 @@ header {
     border-top: 1px solid #ccc;
     color: #2F8D46;
     font-size: 16px;
+    text-align: center !important;
 }
 
 footer {
