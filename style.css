@@ -18,7 +18,6 @@ body {
     box-sizing: border-box;
 }
 
-/* Darkens the background image so text is readable */
 body::before {
     content: "";
     position: fixed; 
@@ -110,7 +109,7 @@ header h2 {
 }
 
 /* =========================================
-   FOOTER (Desktop Default)
+   FOOTER
    ========================================= */
 footer {
     position: fixed; 
@@ -126,12 +125,13 @@ footer {
 }
 
 /* =========================================
-   MOBILE PHONE FIXES (Screens smaller than 600px)
+   MOBILE PHONE FIXES
    ========================================= */
 @media (max-width: 600px) {
     body {
         justify-content: flex-start; 
-        padding: 20px 15px 100px 15px; 
+        /* Extra padding at the bottom so the chat widget never covers your content */
+        padding: 20px 15px 150px 15px; 
         align-items: center; 
     }
 
