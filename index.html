@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- This is CRITICAL for mobile. It stops the page from zooming out and cutting off the widget -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>DBTI BoscoBot</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -33,7 +34,6 @@
     <p>Don Bosco Technological Institute | East Boroko, Papua New Guinea</p>
   </footer>
 
-  <!-- The Standard Voiceflow Widget Script -->
   <script type="text/javascript">
     (function(d, t) {
         var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
