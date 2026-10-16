@@ -1,3 +1,6 @@
+/* =========================================
+   GLOBAL STYLES & BACKGROUND
+   ========================================= */
 body {
     background-image: url('bosco.jpg'); 
     background-repeat: no-repeat;
@@ -6,88 +9,151 @@ body {
     background-attachment: fixed;
     font-family: Arial, sans-serif;
     margin: 0;
-    height: 100vh;
+    min-height: 100vh; /* Changed from height to min-height for mobile scrolling */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px 0; /* Adds breathing room top and bottom */
+    box-sizing: border-box;
 }
 
-/* Darkens the background image so the card stands out */
+/* Darkens the background image so text is readable */
 body::before {
     content: "";
-    position: absolute;
+    position: fixed; /* Fixed so it covers the screen even when scrolling */
     top: 0; left: 0; width: 100%; height: 100%;
     background-color: rgba(0, 0, 0, 0.6); 
     z-index: -1;
 }
 
+/* =========================================
+   HEADER & TYPOGRAPHY
+   ========================================= */
 header {
     text-align: center;
     color: yellow;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 2px 6px #000000;
+    width: 100%;
+}
+
+header h2 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
 }
 
 .welcome-text {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
     color: white;
-    margin-top: 5px;
+    margin: 0;
+    text-shadow: 2px 2px 6px #000000;
 }
 
-/* The central information box */
-.info-box {
-    background-color: rgba(255, 255, 255, 0.95);
-    width: 500px;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+/* =========================================
+   CENTRAL CONTENT AREA
+   ========================================= */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    z-index: 1;
+}
+
+.center-content {
     text-align: center;
-    color: #333;
+    color: white;
+    width: 100%;
+    text-shadow: 2px 2px 6px #000000;
 }
 
 /* Styling specifically for the DBTI Logo */
 .school-logo {
-    width: 180px;          /* Adjust size here if needed */
+    width: 200px;          
     height: auto;
     display: block;
-    margin: 0 auto 20px auto; /* Centers the logo with space below */
-    /* No border-radius or glow needed for an official crest */
+    margin: 0 auto 20px auto; 
+    /* Blends white background of logo into dark background */
+    mix-blend-mode: screen; 
 }
 
-.info-box h3 {
-    color: #2F8D46; /* DBTI Green */
-    margin-top: 10px;
-    font-size: 22px;
+/* Green Box for "Hi! How can I help you?" */
+.center-content h3 {
+    color: #2F8D46;
+    font-size: 24px;
+    margin: 0 auto 15px auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-.info-box p {
-    text-align: left;
+.center-content p {
     line-height: 1.6;
-}
-
-.info-box ul {
-    text-align: left;
-    line-height: 1.8;
-    margin-bottom: 20px;
+    font-size: 18px;
+    margin: 10px 0;
 }
 
 .instruction {
     margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid #ccc;
-    color: #2F8D46;
-    font-size: 16px;
-    text-align: center !important;
+    font-size: 18px;
+    color: yellow;
+    font-weight: bold;
 }
 
+/* =========================================
+   FOOTER
+   ========================================= */
 footer {
-    position: absolute;
-    bottom: 20px;
+    margin-top: 40px;
     width: 100%;
     text-align: center;
     color: white;
     font-size: 14px;
     text-shadow: 1px 1px 2px #000000;
+}
+
+/* =========================================
+   MOBILE PHONE FIXES (Screens smaller than 600px)
+   ========================================= */
+@media (max-width: 600px) {
+    body {
+        justify-content: flex-start; /* Align to top so user can scroll naturally */
+        padding-top: 30px;
+    }
+
+    header h2 {
+        font-size: 18px;      
+        padding: 0 15px;
+        line-height: 1.4;
+    }
+    
+    .welcome-text {
+        font-size: 22px;
+    }
+
+    .school-logo {
+        width: 130px; /* Smaller logo on phone */
+        margin-bottom: 15px;
+    }
+
+    .center-content h3 {
+        font-size: 18px;      
+        padding: 6px 15px;
+    }
+
+    .center-content p, 
+    .instruction {
+        font-size: 15px; /* Smaller text so it fits the screen width */
+        padding: 0 15px;
+    }
+
+    footer {
+        margin-top: 30px;
+        padding-bottom: 20px;
+    }
 }
